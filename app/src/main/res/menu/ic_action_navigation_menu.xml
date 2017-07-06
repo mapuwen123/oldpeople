@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/inquiry_item"
+        android:title="@string/ask_normal"
+        android:icon="@drawable/toolbar_ask_normal" />
+    <item
+        android:id="@+id/examination_item"
+        android:title="@string/physicals_normal"
+        android:icon="@drawable/toolbar_physicals_normal" />
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#31C27C</color>
+    <color name="colorPrimaryDark">#31C27C</color>
+    <color name="colorAccent">#28AF6E</color>
+    <color name="activity_background">#ededed</color>
+
+    <color name="tab_checked">@color/colorPrimaryDark</color>
+    <color name="tab_unchecked">#757575</color>
+
+    <color name="common_login_line">#d7d7d7</color>
+    
+    <color name="color_white">#FFFFFF</color>
+
+    <color name="temputure_line">#FF70A9DE</color>
+</resources>

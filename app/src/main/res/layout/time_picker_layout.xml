@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b5555555"
+    android:gravity="center_horizontal|bottom"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:gravity="center_horizontal" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            android:gravity="center_horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="取消"
+                android:paddingLeft="10dp"
+                android:textColor="@color/color_white" />
+            <TextView
+                android:id="@+id/popwindow_save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="完成"
+                android:textColor="@color/color_white" />
+        </LinearLayout>>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <NumberPicker
+                android:id="@+id/popwindow_date_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="20" />
+
+            <NumberPicker
+                android:id="@+id/popwindow_date_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="13" />
+
+            <NumberPicker
+                android:id="@+id/popwindow_date_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="13" />
+
+            <NumberPicker
+                android:id="@+id/popwindow_date_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="13" />
+
+            <NumberPicker
+                android:id="@+id/popwindow_date_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="13" />
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+    </LinearLayout>
+
+</LinearLayout>
