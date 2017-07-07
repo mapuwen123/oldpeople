@@ -1,7 +1,12 @@
 package com.aiminerva.oldpeople.utils;
 
 import android.content.Context;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.aiminerva.oldpeople.R;
 
 /**
  * Toast统一管理类
@@ -9,80 +14,41 @@ import android.widget.Toast;
  */
 public class ToastUtil {
 
-    private ToastUtil() {
-        /* cannot be instantiated */
-        throw new UnsupportedOperationException("cannot be instantiated");
+    private static ToastUtil toastUtil = null;
+
+    private Toast toast;
+    private View view;
+    private TextView toast_view;
+
+    private ToastUtil(Context context) {
+        view = View.inflate(context, R.layout.toast_layout, null);
+        toast_view = view.findViewById(R.id.toast);
+        toast = new Toast(context);
+        toast.setView(view);
+        toast.setGravity(Gravity.BOTTOM | Gravity.FILL_HORIZONTAL, 0, 0);
+        toast.setMargin(0, 0);
     }
 
     public static boolean isShow = true;
 
-    /**
-     * 短时间显示Toast
-     *
-     * @param context
-     * @param message
-     */
-    public static void showShort(Context context, CharSequence message) {
-        if (isShow) {
-            Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    public static synchronized ToastUtil getInstance(Context context) {
+        if (toastUtil == null) {
+            toastUtil = new ToastUtil(context);
         }
+        return toastUtil;
     }
 
-    /**
-     * 短时间显示Toast
-     *
-     * @param context
-     * @param message
-     */
-    public static void showShort(Context context, int message) {
-        if (isShow)
-            Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    public ToastUtil setDuration(int duratuion) {
+        toast.setDuration(duratuion);
+        return toastUtil;
     }
 
-    /**
-     * 长时间显示Toast
-     *
-     * @param context
-     * @param message
-     */
-    public static void showLong(Context context, CharSequence message) {
-        if (isShow)
-            Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+    public ToastUtil setText(CharSequence s) {
+        toast_view.setText(s);
+        return toastUtil;
     }
 
-    /**
-     * 长时间显示Toast
-     *
-     * @param context
-     * @param message
-     */
-    public static void showLong(Context context, int message) {
-        if (isShow)
-            Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+    public void show() {
+        toast.show();
     }
-
-    /**
-     * 自定义显示Toast时间
-     *
-     * @param context
-     * @param message
-     * @param duration
-     */
-    public static void show(Context context, CharSequence message, int duration) {
-        if (isShow)
-            Toast.makeText(context, message, duration).show();
-    }
-
-    /**
-     * 自定义显示Toast时间
-     *
-     * @param context
-     * @param message
-     * @param duration
-     */
-    public static void show(Context context, int message, int duration) {
-        if (isShow)
-            Toast.makeText(context, message, duration).show();
-    }
-
 }

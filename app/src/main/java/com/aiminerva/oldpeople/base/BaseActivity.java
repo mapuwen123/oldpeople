@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.aiminerva.oldpeople.MyApplication;
 import com.aiminerva.oldpeople.R;
 import com.aiminerva.oldpeople.utils.ActivityUtils;
+import com.aiminerva.oldpeople.utils.ToastUtil;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -149,7 +150,10 @@ public abstract class BaseActivity<V, P extends BasePresenter<V>> extends AppCom
      * @param msg
      */
     public void showToast(CharSequence msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        ToastUtil.getInstance(this)
+                .setDuration(Toast.LENGTH_SHORT)
+                .setText(msg)
+                .show();
     }
 
     /**

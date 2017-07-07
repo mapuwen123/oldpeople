@@ -1,13 +1,7 @@
 package com.aiminerva.oldpeople.ui.hand;
 
-import android.os.Handler;
-
-import com.aiminerva.oldpeople.base.OnPresenterListener;
-
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.annotations.NonNull;
 
 /**
  * Created by Administrator on 2017/7/4.

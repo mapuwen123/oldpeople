@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.IntentFilter;
 
 import com.aiminerva.oldpeople.base.BasePresenter;
-import com.aiminerva.oldpeople.base.OnPresenterListener;
 import com.aiminerva.oldpeople.bean.DeviceInfo;
 import com.aiminerva.oldpeople.bean.FinltopInfo;
 import com.aiminerva.oldpeople.bean.Poinots;
@@ -22,9 +21,6 @@ import com.aiminerva.oldpeople.ui.ecg.receiver.BlueToothBroadcastReceiver;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.Disposable;
 
 /**
  * Created by Administrator on 2017/7/1.

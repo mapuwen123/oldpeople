@@ -7,7 +7,6 @@ import android.content.IntentFilter;
 import com.aiminerva.oldpeople.MyApplication;
 import com.aiminerva.oldpeople.R;
 import com.aiminerva.oldpeople.base.BasePresenter;
-import com.aiminerva.oldpeople.base.OnPresenterListener;
 import com.aiminerva.oldpeople.deviceservice.HealthServiceManager;
 import com.aiminerva.oldpeople.ui.heat.receiver.BlueToothBroadcastReceiver;
 import com.orhanobut.logger.Logger;
@@ -19,19 +18,15 @@ import com.raiing.callback.RVMBLEManagerService;
 import com.raiing.data.RealBattery;
 import com.raiing.data.RealTemperature;
 
-import java.util.List;
 import java.util.UUID;
 
 import de.greenrobot.event.EventBus;
-
-import static android.R.attr.mode;
 
 /**
  * Created by Administrator on 2017/6/27.
  */
 
-public class HeatPresenter extends BasePresenter<HeatView> implements OnPresenterListener<String>,
-        RVMBLEDataService,
+public class HeatPresenter extends BasePresenter<HeatView> implements RVMBLEDataService,
         RVMBLEManagerService {
 
     /**
@@ -121,16 +116,6 @@ public class HeatPresenter extends BasePresenter<HeatView> implements OnPresente
 
     public void closeRealm() {
         model.closeRealm();
-    }
-
-    @Override
-    public void success(String msg) {
-
-    }
-
-    @Override
-    public void error(String err) {
-
     }
 
     //-------------RVMBLEDataService--------------

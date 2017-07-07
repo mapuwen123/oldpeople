@@ -178,34 +178,6 @@ public class HeatActivity extends BaseActivity<HeatView, HeatPresenter> implemen
         l.setForm(Legend.LegendForm.LINE);
     }
 
-    //--------------待修改-------------
-//    private void setChartDatanew(Entry entry) {
-//        List<Entry> listaa = new ArrayList<>();
-//        listaa.add(entry);
-//        LineDataSet setHeat = new LineDataSet(listaa, "体温");
-////        LineDataSet setHeat = new LineDataSet(data, "体温");
-//        setHeat.setColor(ContextCompat.getColor(this, R.color.temputure_line));
-//        setHeat.setCircleColor(ContextCompat.getColor(this, R.color.temputure_line));
-//        setHeat.setFillColor(getResources().getColor(R.color.temputure_line));
-//        setHeat.setMode(LineDataSet.Mode.CUBIC_BEZIER);
-//        setHeat.setAxisDependency(YAxis.AxisDependency.LEFT);
-//        setHeat.enableDashedLine(10f, 0f, 0f);
-//        setHeat.setLineWidth(3f);
-//        setHeat.setCircleSize(5f);
-//        setHeat.setDrawValues(true);
-//        setHeat.setValueTextSize(0f);
-//        setHeat.setDrawFilled(true);
-//
-//        List<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
-//        dataSets.add(setHeat);
-//
-//        LineData dataHeat = new LineData(dataSets);
-//
-//        xAxis.setLabelCount(chart_heats.size());
-//        lineChart.setData(dataHeat);
-//        lineChart.animateX(1000, Easing.EasingOption.EaseInOutQuart);
-//    }
-
     private void setChartData(List<Entry> data) {
         LineDataSet setHeat = new LineDataSet(data, "体温");
         setHeat.setColor(ContextCompat.getColor(this, R.color.temputure_line));

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.widget.Toast;
 
 import com.aiminerva.oldpeople.base.BaseActivity;
 import com.aiminerva.oldpeople.common.BuildConfig;
@@ -33,7 +34,6 @@ public class NetBroadcastReceiver extends BroadcastReceiver {
                 && NetworkInfo.State.CONNECTED != wifiState
                 && NetworkInfo.State.CONNECTED != mobileState) {
             // 手机没有任何的网络
-            ToastUtil.showLong(context, "已断开网络连接");
             Logger.e("已断开网络连接");
             BuildConfig.INTERNER = false;
             BaseActivity.showNetSnackbar();

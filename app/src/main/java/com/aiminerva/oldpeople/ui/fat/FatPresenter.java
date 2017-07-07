@@ -1,7 +1,6 @@
 package com.aiminerva.oldpeople.ui.fat;
 
 import com.aiminerva.oldpeople.base.BasePresenter;
-import com.aiminerva.oldpeople.base.OnPresenterListener;
 
 import java.util.concurrent.TimeUnit;
 
