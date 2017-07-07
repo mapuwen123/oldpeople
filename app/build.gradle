@@ -20,7 +20,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -78,7 +78,6 @@ dependencies {
     compile 'de.greenrobot:eventbus:2.4.0'
     compile 'com.karumi:dexter:4.1.0'
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
-    compile 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 }
